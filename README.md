@@ -1,38 +1,41 @@
 Node 3: Static File Server
 
 Objective
-		Create a web server using NodeJS that can server static files.
+
+	Create a web server using NodeJS that can server static files.
 
 Skills
-		Scaffolding an express app.
-		Understanding the relationship between client and server.
-		Using the File System module.
-		Asynchronous Operations
+
+	Scaffolding an express app.
+	Understanding the relationship between client and server.
+	Using the File System module.
+	Asynchronous Operations
 
 Resources
 
-		http://nodejs.org/
-		http://nodejs.org/api/fs.html#fs_fs_readfilesync_filename_options
-		http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
+	http://nodejs.org/
+	http://nodejs.org/api/fs.html#fs_fs_readfilesync_filename_options
+	http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
 
 
 
 Requirements
 
 Part I: Simple Web Server
-		1) Create a new folder in your projects directory.
-		
-		2) cd into the newly created folder.
-		
-		3) Scaffold out a new express app with yo refactoru-express. Yeoman will automatically run npm install to install all dependencies (initially just express).
-		
-		4) Start your web server by running node app.js in terminal.
-		
-		5) Navigate your browser to http://localhost:PORT, where PORT is the port number printed to terminal when you started your server.  
-		
-		Success! You executed a node script which created an HTTP server. As long as the script continues to run in the terminal, it responds to HTTP requests that are sent to localhost. By entering http://localhost:PORT into your browser, you generated an HTTP request to your node server. Each request is responded to with a simple message of "Hello Boulder".
 
-		Tip: You use nodemon to automatically restart your server when app.js changes. Just install nodemon with npm install -g nodemon then run nodemon app.js instead of node app.js.
+	1) Create a new folder in your projects directory.
+	
+	2) cd into the newly created folder.
+	
+	3) Scaffold out a new express app with yo refactoru-express. Yeoman will automatically run npm install to install all dependencies (initially just express).
+	
+	4) Start your web server by running node app.js in terminal.
+	
+	5) Navigate your browser to http://localhost:PORT, where PORT is the port number printed to terminal when you started your server.  
+	
+	Success! You executed a node script which created an HTTP server. As long as the script continues to run in the terminal, it responds to HTTP requests that are sent to localhost. By entering http://localhost:PORT into your browser, you generated an HTTP request to your node server. Each request is responded to with a simple message of "Hello Boulder".
+
+	Tip: You use nodemon to automatically restart your server when app.js changes. Just install nodemon with npm install -g nodemon then run nodemon app.js instead of node app.js.
 
 
 Part II: Static File Server
@@ -66,9 +69,9 @@ Part III: Make it Asynchronous
 	
 	3) Restart your node server and request the localhost url again. You should see the same result as in PART III!
 
-			If you are having trouble with callbacks/asynchronous code, rember the golden rule of asynchronous programming: Anything that depends on the result of an asynchronous call must go inside the callback. Code that comes after the asynchronous call is executed before the callback.
+		If you are having trouble with callbacks/asynchronous code, rember the golden rule of asynchronous programming: Anything that depends on the result of an asynchronous call must go inside the callback. Code that comes after the asynchronous call is executed before the callback.
 
-			Success! So what's different? This time we utilized the asynchronous nature of node by passing a callback to the readFile function. This allows our code to move along normally without being blocked. Once the file has been loaded and the content is ready, node will invoke our callback and allow us to continue on with sending content back to the server.
+		Success! So what's different? This time we utilized the asynchronous nature of node by passing a callback to the readFile function. This allows our code to move along normally without being blocked. Once the file has been loaded and the content is ready, node will invoke our callback and allow us to continue on with sending content back to the server.
 
 Bonus: Static File Server
 
